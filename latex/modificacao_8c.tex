@@ -1,0 +1,184 @@
+\hypertarget{modificacao_8c}{}\section{Referência ao ficheiro modificacao.\+c}
+\label{modificacao_8c}\index{modificacao.\+c@{modificacao.\+c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}struct.\+h\char`\"{}}\\*
+\subsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{modificacao_8c_a09b890e26d37a0fa6c1cd6b375a71e07}{zoom\+Out} (char img\mbox{[}50\mbox{]})
+\item 
+int \hyperlink{modificacao_8c_a9dbf1062316f1611a5fb50472537f0d6}{zoom\+In} (char img\mbox{[}50\mbox{]})
+\begin{DoxyCompactList}\small\item\em zoom in \end{DoxyCompactList}\item 
+int \hyperlink{modificacao_8c_a37faa771001bcdb5d3b212d325a301b2}{rotacao\+Antihorario} (char img\mbox{[}50\mbox{]})
+\item 
+int \hyperlink{modificacao_8c_a82a7a1b862a6aee737db52054b975d95}{rotacao\+Horario} (char img\mbox{[}50\mbox{]})
+\item 
+int \hyperlink{modificacao_8c_ae500be1d19ab1ba171b33acc55899b39}{binarizacao} (char img\mbox{[}50\mbox{]})
+\item 
+int \hyperlink{modificacao_8c_aef618506b544dbee16499945a8a6105b}{negativo} (char img\mbox{[}50\mbox{]})
+\item 
+int \hyperlink{modificacao_8c_acfd66c1a43b03eaed4cad73f7a298f9e}{blur} (char img\mbox{[}50\mbox{]})
+\item 
+int \hyperlink{modificacao_8c_aa1ba90a2bd4c03a3a02d7796228f3294}{bordas\+Img} (char img\mbox{[}50\mbox{]})
+\item 
+int \hyperlink{modificacao_8c_a2ff36dfcac4e6730891e160ac5319637}{shapering} (char img\mbox{[}50\mbox{]})
+\item 
+int \hyperlink{modificacao_8c_a84e84ce67890d884c96017c75ad56e23}{tons\+De\+Cinza} (char img\mbox{[}50\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentação das funções}
+\hypertarget{modificacao_8c_ae500be1d19ab1ba171b33acc55899b39}{}\index{modificacao.\+c@{modificacao.\+c}!binarizacao@{binarizacao}}
+\index{binarizacao@{binarizacao}!modificacao.\+c@{modificacao.\+c}}
+\subsubsection[{binarizacao(char img[50])}]{\setlength{\rightskip}{0pt plus 5cm}int binarizacao (
+\begin{DoxyParamCaption}
+\item[{char}]{img\mbox{[}50\mbox{]}}
+\end{DoxyParamCaption}
+)}\label{modificacao_8c_ae500be1d19ab1ba171b33acc55899b39}
+Assim como quase todas as funcoes desse programa a função \hyperlink{modificacao_8c_ae500be1d19ab1ba171b33acc55899b39}{binarizacao()} recebe como paramentro o nome da imagem que esta sendo manipulada, escreve o cabecario e com dois loops F\+O\+R acessa cada pixel da imagem faz uma media entre s valores R\+G\+B, se a media resultar em um valor abaixo ou igual a de 127 o valor do red, green e do blue e colocar como zero, caso o valor seja superior a 127 o red, green e o blue recebe o valor 255, assim o pixel ficará sempre preto ou branco. 
+\begin{DoxyParams}{Parâmetros}
+{\em img} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+nao existe valor retornado 
+\end{DoxyReturn}
+\hypertarget{modificacao_8c_acfd66c1a43b03eaed4cad73f7a298f9e}{}\index{modificacao.\+c@{modificacao.\+c}!blur@{blur}}
+\index{blur@{blur}!modificacao.\+c@{modificacao.\+c}}
+\subsubsection[{blur(char img[50])}]{\setlength{\rightskip}{0pt plus 5cm}int blur (
+\begin{DoxyParamCaption}
+\item[{char}]{img\mbox{[}50\mbox{]}}
+\end{DoxyParamCaption}
+)}\label{modificacao_8c_acfd66c1a43b03eaed4cad73f7a298f9e}
+A funcao \hyperlink{modificacao_8c_acfd66c1a43b03eaed4cad73f7a298f9e}{blur()} recebe como paramentro o nome da imagem que esta sendo manipulada, escreve o cabecario e com dois loops F\+O\+R acessa cada pixel,o pixel acessado encontrasse na matriz img\+P, o red, o green, e o blue sao adicionados ao valor de uma outra matriz denominada n\+Img. Apos a leitura a matriz n\+Img e impre-\/ sa dentro do arquivo com a imagem modificada usando outra dupla de F\+O\+R. 
+\begin{DoxyParams}{Parâmetros}
+{\em img} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+nao existe valor retornado 
+\end{DoxyReturn}
+\hypertarget{modificacao_8c_aa1ba90a2bd4c03a3a02d7796228f3294}{}\index{modificacao.\+c@{modificacao.\+c}!bordas\+Img@{bordas\+Img}}
+\index{bordas\+Img@{bordas\+Img}!modificacao.\+c@{modificacao.\+c}}
+\subsubsection[{bordas\+Img(char img[50])}]{\setlength{\rightskip}{0pt plus 5cm}int bordas\+Img (
+\begin{DoxyParamCaption}
+\item[{char}]{img\mbox{[}50\mbox{]}}
+\end{DoxyParamCaption}
+)}\label{modificacao_8c_aa1ba90a2bd4c03a3a02d7796228f3294}
+A funcao bordas() recebe como paramentro o nome da imagem que esta sendo manipulada, escreve o cabecario e com dois loops F\+O\+R acessa cada pixel,o pixel acessado encontrasse na matriz img\+P, o red, o green, e o blue multiplicados por valores predeterminados para cada pixel ao redor do pixel manipulado. Existe a chance de na multiplicação o valor do R\+G\+B ultrapase o 255 ou seja menor que 0, por isso foram criados seis if para assim caso o valor seja menor doque zero ele passe a ser zero, e se for um valor superior a 255 o valor seja colocado para 255. Os valores R\+G\+B sao adicionados ao valor de uma outra matriz denominada n\+Img. Apos a leitura a matriz n\+Img é impresa dentro do arquivo com a imagem modi-\/ ficada usando outra dupla de F\+O\+R. 
+\begin{DoxyParams}{Parâmetros}
+{\em img} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+nao existe valor retornado 
+\end{DoxyReturn}
+\hypertarget{modificacao_8c_aef618506b544dbee16499945a8a6105b}{}\index{modificacao.\+c@{modificacao.\+c}!negativo@{negativo}}
+\index{negativo@{negativo}!modificacao.\+c@{modificacao.\+c}}
+\subsubsection[{negativo(char img[50])}]{\setlength{\rightskip}{0pt plus 5cm}int negativo (
+\begin{DoxyParamCaption}
+\item[{char}]{img\mbox{[}50\mbox{]}}
+\end{DoxyParamCaption}
+)}\label{modificacao_8c_aef618506b544dbee16499945a8a6105b}
+A funcao \hyperlink{modificacao_8c_aef618506b544dbee16499945a8a6105b}{negativo()} recebe como paramentro o nome da imagem que esta sendo manipulada, escreve o cabecario e com dois loops F\+O\+R acessa cada pixel, o valor do red, do green e do blue e subtraido de 255 obtendo o complemento do valor, esse complemento e o valor a ser colocado no lugar do R\+G\+B deixando a imagem com a aparencia de negativo. 
+\begin{DoxyParams}{Parâmetros}
+{\em img} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+nao existe valor retornado 
+\end{DoxyReturn}
+\hypertarget{modificacao_8c_a37faa771001bcdb5d3b212d325a301b2}{}\index{modificacao.\+c@{modificacao.\+c}!rotacao\+Antihorario@{rotacao\+Antihorario}}
+\index{rotacao\+Antihorario@{rotacao\+Antihorario}!modificacao.\+c@{modificacao.\+c}}
+\subsubsection[{rotacao\+Antihorario(char img[50])}]{\setlength{\rightskip}{0pt plus 5cm}int rotacao\+Antihorario (
+\begin{DoxyParamCaption}
+\item[{char}]{img\mbox{[}50\mbox{]}}
+\end{DoxyParamCaption}
+)}\label{modificacao_8c_a37faa771001bcdb5d3b212d325a301b2}
+A funcao \hyperlink{modificacao_8c_a37faa771001bcdb5d3b212d325a301b2}{rotacao\+Antihorario()} recebe o nome da imagem que esta sofrendo as modificacoes. A funcao acessa essa imagem e a reescreve, começando reescrevendo o cabecario, apôs isso as variaveis contadoras são usadas da seguinte forma, para a linha usamos o contador j , e onde o j seria usado colocamos a expresao lin-\/1-\/1 , apos alguns testes percebemos que \mbox{[}j\mbox{]}\mbox{[}lin-\/i-\/1\mbox{]} faria uma rotacao no sentido antihorario. 
+\begin{DoxyParams}{Parâmetros}
+{\em img} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+nao existe valor retornado 
+\end{DoxyReturn}
+\hypertarget{modificacao_8c_a82a7a1b862a6aee737db52054b975d95}{}\index{modificacao.\+c@{modificacao.\+c}!rotacao\+Horario@{rotacao\+Horario}}
+\index{rotacao\+Horario@{rotacao\+Horario}!modificacao.\+c@{modificacao.\+c}}
+\subsubsection[{rotacao\+Horario(char img[50])}]{\setlength{\rightskip}{0pt plus 5cm}int rotacao\+Horario (
+\begin{DoxyParamCaption}
+\item[{char}]{img\mbox{[}50\mbox{]}}
+\end{DoxyParamCaption}
+)}\label{modificacao_8c_a82a7a1b862a6aee737db52054b975d95}
+A funcao \hyperlink{modificacao_8c_a82a7a1b862a6aee737db52054b975d95}{rotacao\+Horario()} recebe o nome da imagem que esta sofrendo as modificacoes. A funcao acessa essa imagem e a reescreve, comecando reescrevendo o cabecario, com isso a logica utilijada e basicamente a logica inversa da funcao \hyperlink{modificacao_8c_a37faa771001bcdb5d3b212d325a301b2}{rotacao\+Antihorario()}. para a linha usamos a expresao lin-\/j-\/1, e na posicao que deveria ser ocupada por j colocamos o contador i, desse jeito rotacionamos a imagem no sentido horario. 
+\begin{DoxyParams}{Parâmetros}
+{\em img} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+nao existe valor retornado 
+\end{DoxyReturn}
+\hypertarget{modificacao_8c_a2ff36dfcac4e6730891e160ac5319637}{}\index{modificacao.\+c@{modificacao.\+c}!shapering@{shapering}}
+\index{shapering@{shapering}!modificacao.\+c@{modificacao.\+c}}
+\subsubsection[{shapering(char img[50])}]{\setlength{\rightskip}{0pt plus 5cm}int shapering (
+\begin{DoxyParamCaption}
+\item[{char}]{img\mbox{[}50\mbox{]}}
+\end{DoxyParamCaption}
+)}\label{modificacao_8c_a2ff36dfcac4e6730891e160ac5319637}
+A funcao \hyperlink{modificacao_8c_a2ff36dfcac4e6730891e160ac5319637}{shapering()} recebe como paramentro o nome da imagem que esta sendo manipulada, escreve o cabecario e com dois loops F\+O\+R acessa cada pixel,o pixel acessado encontrasse na matriz img\+P, o red, o green, e o blue multiplicados por valores predeterminados para cada pixel ao redor do pixel manipulado. Existe a chance de na multiplicacao o valor do R\+G\+B ultrapase o 255 ou seja menor que 0, por isso foram criados seis if para assim caso o valor seja menor doque zero ele passe a ser zero, e se for um valor superior a 255 o valor seja colocado para 255. Os valores R\+G\+B são adicionados ao valor de uma outra matriz denominada n\+Img. Apos a leitura a matriz n\+Img e impresa dentro do arquivo com a imagem modi-\/ ficada usando outra dupla de F\+O\+R. 
+\begin{DoxyParams}{Parâmetros}
+{\em img} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+nao existe valor retornado 
+\end{DoxyReturn}
+\hypertarget{modificacao_8c_a84e84ce67890d884c96017c75ad56e23}{}\index{modificacao.\+c@{modificacao.\+c}!tons\+De\+Cinza@{tons\+De\+Cinza}}
+\index{tons\+De\+Cinza@{tons\+De\+Cinza}!modificacao.\+c@{modificacao.\+c}}
+\subsubsection[{tons\+De\+Cinza(char img[50])}]{\setlength{\rightskip}{0pt plus 5cm}int tons\+De\+Cinza (
+\begin{DoxyParamCaption}
+\item[{char}]{img\mbox{[}50\mbox{]}}
+\end{DoxyParamCaption}
+)}\label{modificacao_8c_a84e84ce67890d884c96017c75ad56e23}
+A funcao \hyperlink{modificacao_8c_a84e84ce67890d884c96017c75ad56e23}{tons\+De\+Cinza()} recebe como paramentro o nome da imagem que esta sendo manipulada, escreve o cabecario e com dois loops F\+O\+R acessa cada pixel tira uma media entre os valores do R\+G\+B, esse valor e colo-\/ cado no lugar dos valores exisentes anteriormente, pois no R\+G\+B o cinza ocorre quando o valor do R\+G\+B e igual, assim uma media entre os tres iguala os valores. 
+\begin{DoxyParams}{Parâmetros}
+{\em img} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+nao existe valor retornado 
+\end{DoxyReturn}
+\hypertarget{modificacao_8c_a9dbf1062316f1611a5fb50472537f0d6}{}\index{modificacao.\+c@{modificacao.\+c}!zoom\+In@{zoom\+In}}
+\index{zoom\+In@{zoom\+In}!modificacao.\+c@{modificacao.\+c}}
+\subsubsection[{zoom\+In(char img[50])}]{\setlength{\rightskip}{0pt plus 5cm}int zoom\+In (
+\begin{DoxyParamCaption}
+\item[{char}]{img\mbox{[}50\mbox{]}}
+\end{DoxyParamCaption}
+)}\label{modificacao_8c_a9dbf1062316f1611a5fb50472537f0d6}
+
+
+zoom in 
+
+A função \hyperlink{modificacao_8c_a9dbf1062316f1611a5fb50472537f0d6}{zoom\+In()} recebe o nome da imagem que esta sofrendo as modificacoes. A funcao acessa essa imagem e a reescreve, começando reescrevendo o cabecario, e depois lendo a matriz n\+Img e reduzindo a imagem. Para facilitar o entendimento, a função reduz reduz 4 pixels para 1. 
+\begin{DoxyParams}{Parâmetros}
+{\em img} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+nao existe valor retornado 
+\end{DoxyReturn}
+\hypertarget{modificacao_8c_a09b890e26d37a0fa6c1cd6b375a71e07}{}\index{modificacao.\+c@{modificacao.\+c}!zoom\+Out@{zoom\+Out}}
+\index{zoom\+Out@{zoom\+Out}!modificacao.\+c@{modificacao.\+c}}
+\subsubsection[{zoom\+Out(char img[50])}]{\setlength{\rightskip}{0pt plus 5cm}int zoom\+Out (
+\begin{DoxyParamCaption}
+\item[{char}]{img\mbox{[}50\mbox{]}}
+\end{DoxyParamCaption}
+)}\label{modificacao_8c_a09b890e26d37a0fa6c1cd6b375a71e07}
+A funcao \hyperlink{modificacao_8c_a09b890e26d37a0fa6c1cd6b375a71e07}{zoom\+Out()} recebe o nome da imagem que esta sofrendo as modificacoes. A funcao acessa essa imagem e a reescreve, comecando reescrevendo o cabecario, e depois lendo a matriz n\+Img e ampliando a imagem. Para facilitar o entendimento, a função faz 1 pixel ser copiado mais 3 vezes, dobrando o tamanho da imagem. 
+\begin{DoxyParams}{Parâmetros}
+{\em img} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+nao existe valor retornado 
+\end{DoxyReturn}

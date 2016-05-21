@@ -1,0 +1,48 @@
+\hypertarget{lerEscreverPPM_8c}{}\section{Referência ao ficheiro ler\+Escrever\+P\+P\+M.\+c}
+\label{lerEscreverPPM_8c}\index{ler\+Escrever\+P\+P\+M.\+c@{ler\+Escrever\+P\+P\+M.\+c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}struct.\+h\char`\"{}}\\*
+\subsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{lerEscreverPPM_8c_a227bb1bbb89bd82742801020d3398cac}{ler\+P\+P\+M} (char img\mbox{[}50\mbox{]})
+\item 
+int \hyperlink{lerEscreverPPM_8c_a2e5d7bb31400ff8ace0b852f96eaa7fe}{escreve\+P\+P\+M} (char img\mbox{[}50\mbox{]})
+\begin{DoxyCompactList}\small\item\em escreve a imagem de saida do programa com base na matriz img\+P. A função \hyperlink{lerEscreverPPM_8c_a2e5d7bb31400ff8ace0b852f96eaa7fe}{escreve\+P\+P\+M()} usa a matriz img\+P criada da função \hyperlink{lerEscreverPPM_8c_a227bb1bbb89bd82742801020d3398cac}{ler\+P\+P\+M()} para criar uma imagem copia da original Essa copia sofrera as modificações requeridas pelo usuario. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Documentação das funções}
+\hypertarget{lerEscreverPPM_8c_a2e5d7bb31400ff8ace0b852f96eaa7fe}{}\index{ler\+Escrever\+P\+P\+M.\+c@{ler\+Escrever\+P\+P\+M.\+c}!escreve\+P\+P\+M@{escreve\+P\+P\+M}}
+\index{escreve\+P\+P\+M@{escreve\+P\+P\+M}!ler\+Escrever\+P\+P\+M.\+c@{ler\+Escrever\+P\+P\+M.\+c}}
+\subsubsection[{escreve\+P\+P\+M(char img[50])}]{\setlength{\rightskip}{0pt plus 5cm}int escreve\+P\+P\+M (
+\begin{DoxyParamCaption}
+\item[{char}]{img\mbox{[}50\mbox{]}}
+\end{DoxyParamCaption}
+)}\label{lerEscreverPPM_8c_a2e5d7bb31400ff8ace0b852f96eaa7fe}
+
+
+escreve a imagem de saida do programa com base na matriz img\+P. A função \hyperlink{lerEscreverPPM_8c_a2e5d7bb31400ff8ace0b852f96eaa7fe}{escreve\+P\+P\+M()} usa a matriz img\+P criada da função \hyperlink{lerEscreverPPM_8c_a227bb1bbb89bd82742801020d3398cac}{ler\+P\+P\+M()} para criar uma imagem copia da original Essa copia sofrera as modificações requeridas pelo usuario. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em img} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+não existe valor retornado 
+\end{DoxyReturn}
+\hypertarget{lerEscreverPPM_8c_a227bb1bbb89bd82742801020d3398cac}{}\index{ler\+Escrever\+P\+P\+M.\+c@{ler\+Escrever\+P\+P\+M.\+c}!ler\+P\+P\+M@{ler\+P\+P\+M}}
+\index{ler\+P\+P\+M@{ler\+P\+P\+M}!ler\+Escrever\+P\+P\+M.\+c@{ler\+Escrever\+P\+P\+M.\+c}}
+\subsubsection[{ler\+P\+P\+M(char img[50])}]{\setlength{\rightskip}{0pt plus 5cm}int ler\+P\+P\+M (
+\begin{DoxyParamCaption}
+\item[{char}]{img\mbox{[}50\mbox{]}}
+\end{DoxyParamCaption}
+)}\label{lerEscreverPPM_8c_a227bb1bbb89bd82742801020d3398cac}
+A função \hyperlink{lerEscreverPPM_8c_a227bb1bbb89bd82742801020d3398cac}{ler\+P\+P\+M()} le a imagem que foi passada como parametro para essa função, caso ocorra algum erro no decorrer da função, \hyperlink{lerEscreverPPM_8c_a227bb1bbb89bd82742801020d3398cac}{ler\+P\+P\+M()} retorna o valor 1. A imagem lida e gravada em uma matriz na qual foi utilizada alocação dinamica. Nessa funcao tambem existe uma copia da matriz que possui a imagem original. Essa copia sera utilizada para o funcionamento de algumas funções como o \hyperlink{modificacao_8c_acfd66c1a43b03eaed4cad73f7a298f9e}{blur()} e bordas(). 
+\begin{DoxyParams}{Parâmetros}
+{\em img} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+nao existe valor retornado 
+\end{DoxyReturn}

@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>Editor de PPM: Código-Fonte de struct.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Editor de PPM
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.10 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Localizar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&#160;relacionadas</span></a></li>
+      <li><a href="annotated.html"><span>Estruturas&#160;de&#160;dados</span></a></li>
+      <li class="current"><a href="files.html"><span>Ficheiros</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Localizar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;ficheiros</span></a></li>
+      <li><a href="globals.html"><span>Globais</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">struct.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="struct_8h.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __struct__</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __struct__</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="structPixel.html">    8</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="structPixel.html#a975b9929cee50eba61195c414b9b8420">    9</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structPixel.html#a975b9929cee50eba61195c414b9b8420">red</a>, green, blue;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;} <a class="code" href="structPixel.html">Pixel</a>;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="structImagem.html">   16</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="structImagem.html#aaadb35846686b4f7f66d589d929ca57a">   17</a></span>&#160;    <span class="keywordtype">int</span> x, <a class="code" href="structImagem.html#aaadb35846686b4f7f66d589d929ca57a">y</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="structImagem.html#a4d2467ff2a3b781f9ef1197589859d30">   18</a></span>&#160;    <a class="code" href="structPixel.html">Pixel</a> *<a class="code" href="structImagem.html#a4d2467ff2a3b781f9ef1197589859d30">image</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;} <a class="code" href="structImagem.html">Imagem</a>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="struct_8h.html#a133829ffe252f0dd1fd5510b01438225">   26</a></span>&#160;<a class="code" href="structPixel.html">Pixel</a>** <a class="code" href="struct_8h.html#a133829ffe252f0dd1fd5510b01438225">imgP</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="struct_8h.html#ae685db36bbe05414fe6ebaa11bedd58a">   27</a></span>&#160;<a class="code" href="structPixel.html">Pixel</a>** <a class="code" href="struct_8h.html#ae685db36bbe05414fe6ebaa11bedd58a">nImg</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="struct_8h.html#aed6efd15a611832e8335a27a1c93795a">   33</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="struct_8h.html#aed6efd15a611832e8335a27a1c93795a">lin</a>, <a class="code" href="struct_8h.html#afb52e720f5f0c483db5861f9e42e924e">col</a>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="struct_8h_html_aed6efd15a611832e8335a27a1c93795a"><div class="ttname"><a href="struct_8h.html#aed6efd15a611832e8335a27a1c93795a">lin</a></div><div class="ttdeci">int lin</div><div class="ttdef"><b>Definition:</b> struct.h:33</div></div>
+<div class="ttc" id="struct_8h_html_afb52e720f5f0c483db5861f9e42e924e"><div class="ttname"><a href="struct_8h.html#afb52e720f5f0c483db5861f9e42e924e">col</a></div><div class="ttdeci">int col</div><div class="ttdef"><b>Definition:</b> struct.h:33</div></div>
+<div class="ttc" id="struct_8h_html_ae685db36bbe05414fe6ebaa11bedd58a"><div class="ttname"><a href="struct_8h.html#ae685db36bbe05414fe6ebaa11bedd58a">nImg</a></div><div class="ttdeci">Pixel ** nImg</div><div class="ttdef"><b>Definition:</b> struct.h:27</div></div>
+<div class="ttc" id="structPixel_html_a975b9929cee50eba61195c414b9b8420"><div class="ttname"><a href="structPixel.html#a975b9929cee50eba61195c414b9b8420">Pixel::red</a></div><div class="ttdeci">int red</div><div class="ttdef"><b>Definition:</b> struct.h:9</div></div>
+<div class="ttc" id="struct_8h_html_a133829ffe252f0dd1fd5510b01438225"><div class="ttname"><a href="struct_8h.html#a133829ffe252f0dd1fd5510b01438225">imgP</a></div><div class="ttdeci">Pixel ** imgP</div><div class="ttdef"><b>Definition:</b> struct.h:26</div></div>
+<div class="ttc" id="structImagem_html_aaadb35846686b4f7f66d589d929ca57a"><div class="ttname"><a href="structImagem.html#aaadb35846686b4f7f66d589d929ca57a">Imagem::y</a></div><div class="ttdeci">int y</div><div class="ttdef"><b>Definition:</b> struct.h:17</div></div>
+<div class="ttc" id="structImagem_html"><div class="ttname"><a href="structImagem.html">Imagem</a></div><div class="ttdef"><b>Definition:</b> struct.h:16</div></div>
+<div class="ttc" id="structPixel_html"><div class="ttname"><a href="structPixel.html">Pixel</a></div><div class="ttdef"><b>Definition:</b> struct.h:8</div></div>
+<div class="ttc" id="structImagem_html_a4d2467ff2a3b781f9ef1197589859d30"><div class="ttname"><a href="structImagem.html#a4d2467ff2a3b781f9ef1197589859d30">Imagem::image</a></div><div class="ttdeci">Pixel * image</div><div class="ttdef"><b>Definition:</b> struct.h:18</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.10
+</small></address>
+</body>
+</html>
